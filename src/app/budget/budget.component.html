@@ -1,1 +1,22 @@
-<p>budget works!</p>
+<app-header></app-header>
+<form [formGroup]="budgetCalculate">
+  <div class="container row">
+    <div class="row mt-3">
+      <label class="col-md-3">Rice Value :</label>
+      <input class="form-control mt-2" style="margin-left: 20px" placeholder="Rice kgs" formControlName="rice"
+             (input)="kgsCalculate()">
+    </div>
+    <div class="row mt-3">
+      <label class="col-md-3">Dhal Value :</label>
+      <input class="form-control mt-2" style="margin-left: 20px" placeholder="Dhal kgs" formControlName="dhal"
+             (input)="kgsCalculate()">
+    </div>
+  </div>
+
+  <div class="container row mt-2" style="background: #f2ee8a; margin: 0px">
+    <div class="row mt-3">
+      <label class="col-md-3">Total :</label>
+      <input class="form-control mt-2 mb-2" style="margin-left: 20px" placeholder="Total" formControlName="totalKgs">
+    </div>
+  </div>
+</form>
