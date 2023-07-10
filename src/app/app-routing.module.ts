@@ -11,7 +11,7 @@ const routes: Routes = [
     component: SubsidyComponent
   },
   {
-    path: 'budget',
+    path: '',
     component: BudgetComponent
   },
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
