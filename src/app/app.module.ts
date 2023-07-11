@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { RiceComponent } from './budget/rice.component';
+import { RiceComponent } from './rice/rice.component';
 import { SubsidyComponent } from './subsidy/subsidy.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SaltComponent } from './salt/salt.component';

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'app-budget',
+  selector: 'app-rice',
   templateUrl: './rice.component.html',
   styleUrls: ['./rice.component.scss']
 })
@@ -22,7 +22,10 @@ export class RiceComponent implements OnInit {
     studentsCount: new FormControl("", [Validators.required]),
     days: new FormControl("", [Validators.required]),
     totalKgs: new FormControl("", [Validators.required]),
+    givenKgs: new FormControl("", [Validators.required]),
+    remainingKgs: new FormControl("", [Validators.required]),
     schoolType: new FormControl("", [Validators.required]),
+    credit: new FormControl("", [Validators.required]),
   });
 
   ngOnInit(): void {
@@ -32,8 +35,13 @@ export class RiceComponent implements OnInit {
     const studentsCount = this.budgetCalculate.get("studentsCount")?.value
     const startCount = this.budgetCalculate.get("startCount")?.value
     const days = this.budgetCalculate.get("days")?.value
-    const total =  Number(startCount) - (Number(studentsCount) * Number(days) * Number(this.riceGramsValue));
-    this.budgetCalculate.controls["totalKgs"].setValue(total)
+    const credit = this.budgetCalculate.get("credit")?.value
+    const remainingTotal =  Number(startCount) - (Number(studentsCount) * Number(days) * Number(this.riceGramsValue)) + Number(credit);
+    this.budgetCalculate.controls["remainingKgs"].setValue((remainingTotal).toFixed(2) + " Kgs");
+    const total = Number(startCount) + Number(credit);
+    this.budgetCalculate.controls["totalKgs"].setValue((total).toFixed(2) + " Kgs");
+    const givenTotal = Number(studentsCount) * Number(days) * Number(this.riceGramsValue);
+    this.budgetCalculate.controls["givenKgs"].setValue((givenTotal).toFixed(2) + " Kgs");
   }
 
   schoolType(event: any) {

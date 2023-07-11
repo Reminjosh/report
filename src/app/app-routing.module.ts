@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {SubsidyComponent} from "./subsidy/subsidy.component";
-import {RiceComponent} from "./budget/rice.component";
+import {RiceComponent} from "./rice/rice.component";
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {DhalComponent} from "./dhal/dhal.component";

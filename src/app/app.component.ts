@@ -13,7 +13,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    // this.router.navigate(["budget"])
+    // this.router.navigate(["rice"])
     this.renderer.removeClass(
       document.querySelector('app-root'),
       ''
