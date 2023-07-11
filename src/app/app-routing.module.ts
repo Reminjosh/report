@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {SubsidyComponent} from "./subsidy/subsidy.component";
-import {BudgetComponent} from "./budget/budget.component";
+import {RiceComponent} from "./budget/rice.component";
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
+import {DhalComponent} from "./dhal/dhal.component";
+import {OilComponent} from "./oil/oil.component";
+import {PaasiParuppuComponent} from "./paasi-paruppu/paasi-paruppu.component";
+import {KondaKadalaiComponent} from "./konda-kadalai/konda-kadalai.component";
+import {SaltComponent} from "./salt/salt.component";
 
 const routes: Routes = [
   {
@@ -12,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: BudgetComponent
+    component: RiceComponent
   },
   {
     path: 'header',
@@ -21,7 +26,27 @@ const routes: Routes = [
   {
     path: 'footer',
     component: FooterComponent
-  }
+  },
+  {
+    path: 'dhal',
+    component: DhalComponent
+  },
+  {
+    path: 'oil',
+    component: OilComponent
+  },
+  {
+    path: 'paasiParuppu',
+    component: PaasiParuppuComponent
+  },
+  {
+    path: 'kondaKadalai',
+    component: KondaKadalaiComponent
+  },
+  {
+    path: 'salt',
+    component: SaltComponent
+  },
 ];
 
 @NgModule({

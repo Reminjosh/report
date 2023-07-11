@@ -1,0 +1,16 @@
+.toggle-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.show-menu {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .col-md-1 {
+    display: none;
+  }
+}
